@@ -148,8 +148,9 @@
 		var $optgroup = $('<optgroup label="'+$.trim(getText($group))+'" />');
 		
 		//append top option to it (current list item's text)
-		createOption($group,$optgroup, settings.groupPageText);
-	
+		//createOption($group,$optgroup, settings.groupPageText);
+		createOption($group,$optgroup, $.trim(getText($group)));
+		
 		//loop through each sub-nav list
 		$group.children('ul, ol').each(function(){
 		
